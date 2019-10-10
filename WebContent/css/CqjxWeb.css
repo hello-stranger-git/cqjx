@@ -1,0 +1,45 @@
+.article_main .lbt_img{
+    width: 80%;
+    /* background: black; */
+    height: 350px;
+    margin: auto;   
+    margin-top: 70px;
+    display: block;
+}
+.article_main .every_message .gsjj .gsjj_title{   
+    width: 80%;
+    margin: auto;
+    background: #e3e4e5;
+    height: 30px;
+    border: 2px solid #80808042;
+    margin-top: 10px;
+}
+.article_main .every_message .gsjj .gsjj_title span{
+    line-height: 2;
+}
+.article_main .every_message .gsjj .gsjj_context{
+    width: 80%;
+    /* background: #e3e4e5; */
+    margin: auto;
+    line-height: 2;
+    margin-top: 10px;
+}
+.center_h3{
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.center_h3::after{
+    content: "";
+    position: absolute;
+    top: 36px;
+    width: 107px;
+    height: 2px;
+    left: 45%;
+    background: #48c7ec;
+}
+.main_context p{
+    text-indent: 2em
+}

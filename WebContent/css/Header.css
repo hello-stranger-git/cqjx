@@ -1,0 +1,136 @@
+.clearfix::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.header{
+    background-color: #e3e4e5;
+    color: #999;
+    height: 60px;
+    line-height: 60px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:0;
+    box-shadow: 2px 4px 6px #a1a4a785;
+    z-index: 1;
+}
+
+.header .topnav .top_logo{
+    margin: 5px 5px;
+}
+.header .topnav{
+    position: relative;
+}
+.header .topnav .gs_name{
+    position: absolute;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+}
+.header .topnav>li>a{
+	color:#666;
+	font-size:16px;
+}
+.header .topnav>li>a:hover{
+	text-decoration:none;
+}
+.header .topnav>li{
+    float: right;
+    /* margin: 0 10px; */
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.header .topnav>li:hover{
+    border: 2px solid #cccccc;
+    line-height: 53px;
+    border-bottom: none;
+    background-color:#FFFFFF; 
+}
+.header .topnav>li .gsjj_submenu{
+    text-align: left;
+    line-height: 1.5;
+    width: 300px;
+    display: none;
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    position: absolute;
+    right: -2px;
+    background-color: #FFFFFF;
+}
+.header .topnav>li:hover .gsjj_submenu{
+    display: block;
+}
+.header .topnav>li:hover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #FFFFFF;
+    bottom: 0;
+    left: 0;
+}
+/* 招贤纳士二级目录 */
+.header .topnav>li .zpxx_submenu{
+    display: none;
+}
+.header .topnav>li .zpxx_submenu>ul>li>a{
+    color: #666;
+    text-decoration:none;
+}
+.header .topnav>li:hover .zpxx_submenu{
+    display: block; 
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: -2px;
+    width: 150px;
+    background-color:#FFFFFF;
+}
+/* 相关资料控制二级目录 */
+.header .topnav>li .xgzl_submenu{
+    display: none;
+}
+.header .topnav>li:hover .xgzl_submenu{
+    /* display: block; */
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: -2px;
+    width: 150px;
+    background-color:#FFFFFF;
+}
+
+.header .topnav>li .gsfl_submenu{
+    display: none;
+}
+.header .topnav>li:hover .gsfl_submenu{
+    display: block;
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: -2px;
+    width: 150px;
+    background-color:#FFFFFF;
+}
+.header .topnav .gsjj:hover{
+    border:none;
+    background-color: #e3e4e5;
+    line-height: 60px;
+}
+.header .topnav .gsjj:hover::after{
+    background-color: #e3e4e5;
+}
+
+.header .topnav .bmdz:hover{
+    border:none;
+    background-color: #e3e4e5;
+    line-height: 60px;
+}
+.header .topnav .bmdz:hover::after{
+    background-color: #e3e4e5;
+}
+/*����boostrap��ʽ*/
