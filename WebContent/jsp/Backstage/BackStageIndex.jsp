@@ -43,23 +43,23 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="index">
-						<textarea class="form-control" rows="3"></textarea>
-						<button type="button" class="btn btn-primary">Button</button>
+						<textarea class="form-control" rows="10"></textarea>
+						<button type="button" class="btn btn-primary">修改</button>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="cpzx">
-						<textarea class="form-control" rows="3"></textarea>
-						<button type="button" class="btn btn-primary">Button</button>
+						<textarea class="form-control" rows="10"></textarea>
+						<button type="button" class="btn btn-primary">修改</button>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="rczp">
-						<textarea class="form-control" rows="3"></textarea>
-						<button type="button" class="btn btn-primary">Button</button>
+						<textarea class="form-control" rows="10"></textarea>
+						<button type="button" class="btn btn-primary">修改</button>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="gsfl">
-						<textarea class="form-control" rows="3"></textarea>
-						<button type="button" class="btn btn-primary">Button</button>
+						<textarea class="form-control" rows="10"></textarea>
+						<button type="button" class="btn btn-primary">修改</button>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="lxwm">
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="10"></textarea>
 						<button type="button" class="btn btn-primary">修改</button>
 					</div>
 				</div>
