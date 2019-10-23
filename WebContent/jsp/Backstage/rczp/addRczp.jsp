@@ -23,10 +23,11 @@
 	<div class="container">
 		<form
 			action="${pageContext.request.contextPath}/rczpAction_addrczp"
-			method="post">
+			method="post"  enctype="multipart/form-data">
 			人才类型:<input type="text" name="rczptype">
 			<textarea class="form-control" rows="10" placeholder="人才类型描述"
 				name="rczpcontent"></textarea>
+				<input type="file" name="rczpImage" required="required">
 			<button type="submit" class="btn btn-primary">添加</button>
 		</form>
 	</div>
