@@ -11,6 +11,7 @@
 		<!-- 建立普通属性与表字段映射 -->
 		<property name="cplxtype" column="cplxtype"/>
 		<property name="cplxcontent" column="cplxcontent"/>
+		<property name="cpzxImageName" column="cpzxImageName"/>
 		<!-- <property name="nav" column="nav"/>  -->
 		<!-- 配置多对一的关系：放置的是一的一方的对象 -->
 		<!-- 

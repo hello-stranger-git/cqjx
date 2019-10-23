@@ -4,6 +4,15 @@ public class rczp {
 private String uuid;
 private String rczptype;
 private String rczpcontent;
+
+private String rczpImageName;
+
+public String getRczpImageName() {
+	return rczpImageName;
+}
+public void setRczpImageName(String rczpImageName) {
+	this.rczpImageName = rczpImageName;
+}
 @Override
 public String toString() {
 	return "rczp [uuid=" + uuid + ", rczptype=" + rczptype + ", rczpcontent=" + rczpcontent + "]";

@@ -12,7 +12,7 @@
 </body>
 <script type="text/javascript">
 	function toGsjj(){
-		window.location.href="webGsjjAction_findGsjj.action";
+		window.location.href="<%=request.getContextPath()%>/webGsjjAction_findGsjj.action";
 	}
 
 </script>

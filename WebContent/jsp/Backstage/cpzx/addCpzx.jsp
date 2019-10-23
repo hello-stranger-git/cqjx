@@ -21,10 +21,11 @@
 	<%@ include file="/jsp/Backstage/BackStage_header.jsp"%>
 	<%@ include file="/jsp/lbImage.jsp"%>
 	<div class="container">
-		<form action="${pageContext.request.contextPath}/cpzxAction_addCpzx" method="post">
+		<form action="${pageContext.request.contextPath}/cpzxAction_addCpzx"  enctype="multipart/form-data" method="post">
 		产品类型:<input type="text" name="cplxtype">
 		<textarea class="form-control" rows="10" placeholder="新闻类型描述"
 			name="cplxcontent"></textarea>
+		<input type="file" name="cpzxImage" required="required">
 		<button type="submit" class="btn btn-primary">添加</button>
 	</form>
 	</div>

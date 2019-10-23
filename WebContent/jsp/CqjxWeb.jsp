@@ -25,62 +25,7 @@
 		<!-- 轮播图 -->
 		<%@ include file="/jsp/lbImage.jsp"%>
 
-		<div class="news">
-			<h2 style="text-align: center; margin-bottom: 30px;">新闻资讯</h2>
-			<!-- 新闻信息 -->
-			<div class="row">
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<!-- 
-						<img src="${pageContext.request.contextPath}/img/index/lbt_3.jpg">
-						 -->
-						<div class="caption">
-							<h3>实时新闻</h3>
-							<p>...</p>
-							<!-- <p>
-								<a href="#" class="btn btn-primary" role="button">Button</a> <a
-									href="#" class="btn btn-default" role="button">Button</a>
-							</p>
-							 -->
-						</div>
-					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<!-- 
-						<img src="${pageContext.request.contextPath}/img/index/lbt_3.jpg">
-						 -->
-						<div class="caption">
-							<h3>当前新闻</h3>
-							<p>...</p>
-							<!-- <p>
-								<a href="#" class="btn btn-primary" role="button">Button</a> <a
-									href="#" class="btn btn-default" role="button">Button</a>
-							</p>
-							 -->
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<!-- 
-						<img src="${pageContext.request.contextPath}/img/index/lbt_3.jpg">
-						 -->
-						<div class="caption">
-							<h3>以往新闻</h3>
-							<p>...</p>
-							<!-- <p>
-								<a href="#" class="btn btn-primary" role="button">Button</a> <a
-									href="#" class="btn btn-default" role="button">Button</a>
-							</p>
-							 -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
 		<div

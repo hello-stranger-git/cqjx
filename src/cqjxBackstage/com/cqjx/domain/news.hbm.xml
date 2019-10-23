@@ -11,7 +11,7 @@
 		<!-- 建立普通属性与表字段映射 -->
 		<property name="newstype" column="newstype"/>
 		<property name="newscontent" column="newscontent"/>
-		<property name="newsImage" column="newsImage"/>
+		<property name="newsImageName" column="newsImageName"/>
 		<!-- 配置多对一的关系：放置的是一的一方的对象 -->
 		<!-- 
 			many-to-one标签

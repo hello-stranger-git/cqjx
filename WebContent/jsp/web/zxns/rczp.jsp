@@ -45,7 +45,7 @@
 						  <c:forEach items="${rczpList }" var="rczpList">
 							  <div class="col-sm-6 col-md-3">
 							    <div class="thumbnail">
-							      <img src="${pageContext.request.contextPath}/img/test.jpg" style="width:240px;height:200px">
+							      <img src="upload/${rczpList.rczpImageName}" style="width:240px;height:200px">
 							      <div class="caption">
 							        <h3 style="height: 27px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;">${rczpList.rczptype}</h3>
 							        <p style="height: 60px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">${rczpList.rczpcontent}</p>

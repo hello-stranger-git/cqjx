@@ -22,7 +22,7 @@
 	<%@ include file="/jsp/lbImage.jsp"%>
 	<div class="container">
 		<form class="form-inline container"
-			action="${pageContext.request.contextPath }/userAction_regist"
+			action="${pageContext.request.contextPath }/userRegist_regist"
 			method="post">
 			<div class="form-group">
 				<label>账号</label> <input type="text" class="form-control"

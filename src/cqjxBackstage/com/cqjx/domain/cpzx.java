@@ -6,6 +6,13 @@ public class cpzx {
 	private String uuid;
 	private String cplxtype;
 	private String cplxcontent;
+	private String cpzxImageName;
+	public String getCpzxImageName() {
+		return cpzxImageName;
+	}
+	public void setCpzxImageName(String cpzxImageName) {
+		this.cpzxImageName = cpzxImageName;
+	}
 	@Override
 	public String toString() {
 		return "cpzx [uuid=" + uuid + ", cplxtype=" + cplxtype + ", cplxcontent=" + cplxcontent + "]";
