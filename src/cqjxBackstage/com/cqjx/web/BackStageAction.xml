@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="webAction" extends="struts-default" namespace="/">
+		<action name="webGsjjAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webGsjjAction" method="{1}">
+			<!-- 公司简介 -->
+			<result name="WebFindGsjj">/jsp/CqjxWeb.jsp</result>
+		</action>
+		<action name="webRczpAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webRczpAction" method="{1}">
+			<!-- 人才招聘 -->
+			<result name="WebFindRczp">/jsp/web/zxns/rczp.jsp</result>
+			<result name="WebRczpMessageFind">/jsp/web/zxns/rczpMessage.jsp</result>
+		</action>
+		<action name="webGsflAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webGsflAction" method="{1}">
+			<!-- 公司福利 -->
+			<result name="WebGsflFind">/jsp/web/zxns/gsfl.jsp</result>
+		</action>
+		<action name="webCpzxAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webCpzxAction" method="{1}">
+			<!-- 产品资讯 -->
+			<result name="WebCpzxFind">/jsp/web/cpzx/cpzx.jsp</result>
+			<result name="WebCpzxMessageFind">/jsp/web/cpzx/cpzxMessage.jsp</result>
+		</action>
+		<action name="webNewsAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webNewsAction" method="{1}">
+			<!-- 产品资讯 -->
+			<result name="WebFindNews">/jsp/web/news/news.jsp</result>
+			<result name="WebNewsMessageFind">/jsp/web/news/newsMessage.jsp</result>
+		</action>
+		<action name="webLxwmAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webLxwmAction" method="{1}">
+			<!-- 联系我们 -->
+			<result name="WebLxwmFind">/jsp/web/lxwm/lxwm.jsp</result>
+		</action>
+	</package>
+	
+	
+
+
+	<package name="userAction" extends="struts-default" namespace="/">
+			<action name="userAction_*" class="cqjxBackstage.com.cqjx.web.Action.userAction" method="{1}">
+				<result name="singSuccess" type="redirectAction">gsjjAction_findGsjj</result>
+				<result name="singFaild">/jsp/User/SingIn.jsp</result>
+			</action>
+	</package>
+	<package name="BackStageAction" extends="struts-default" namespace="/">
+		<!-- 拦截器
+		--> 
+		<interceptors>
+			<interceptor name="userFilter" class="cqjxBackstage.com.cqjx.web.filter.userFilter"></interceptor>
+		</interceptors>
+		<global-results><!-- 全局页面跳转 -->
+			<result name="singFaild">/jsp/User/SingIn.jsp</result>
+		</global-results>	
+		<action name="*_*" class="cqjxBackstage.com.cqjx.web.Action.{1}" method="{2}">
+		
+			<!-- 新闻 -->
+			<result name="addNewsIndex">/jsp/Backstage/news/addNews.jsp</result>
+			<result name="addnews" type="redirect">/jsp/Backstage/news/addNews.jsp</result>
+			<result name="findNews">/jsp/Backstage/news/updateNews.jsp</result>
+			<result name="updateNews"  type="redirectAction">newsAction_findNews</result>
+			<result name="deleteNewsIndex"  type="redirectAction">newsAction_findNewsDelete</result>
+			<result name="deleteNews">/jsp/Backstage/news/deleteNews.jsp</result>
+			
+			<!-- 产品资讯 -->
+			<result name="addCpzxIndex">/jsp/Backstage/cpzx/addCpzx.jsp</result>
+			<result name="addCpzx" type="redirect">/jsp/Backstage/cpzx/addCpzx.jsp</result>
+			<result name="findCpzx">/jsp/Backstage/cpzx/updateCpzx.jsp</result>
+			<result name="updateCpzx" type="redirectAction">cpzxAction_findCpzx</result>
+			<result name="deleteCpzxIndex"  type="redirectAction">cpzxAction_findCpzxDelete</result>
+			<result name="deleteCpzx">/jsp/Backstage/cpzx/deleteCpzx.jsp</result>
+			
+			<!-- 人才招聘 -->
+			<result name="addRczpIndex">/jsp/Backstage/rczp/addRczp.jsp</result>
+			<result name="addRczp" type="redirect">/jsp/Backstage/rczp/addRczp.jsp</result>
+			<result name="findRczp">/jsp/Backstage/rczp/updateRczp.jsp</result>
+			<result name="updateRczp"  type="redirectAction">rczpAction_findRczp</result>
+			<result name="deleteRczpIndex"  type="redirectAction">rczpAction_findRczpDelete</result>
+			<result name="deleteRczp">/jsp/Backstage/rczp/deleteRczp.jsp</result>
+			
+			
+<!-- 			<result name="singFaild">/jsp/User/SingIn.jsp</result>  -->
+			
+			<!-- 公司简介 -->
+			<result name="updateGsjj" type="redirectAction">gsjjAction_findGsjj</result>
+			<result name="findGsjj">/jsp/Backstage/gsjj/updateGsjj.jsp</result>
+			<!-- 公司福利 -->
+			<result name="updateGsfl" type="redirectAction">gsflAction_findGsfl</result>
+			<result name="gsflFind">/jsp/Backstage/gsfl/addGsfl.jsp</result>
+			
+			<!-- 联系我们 -->
+			<result name="updateLxwm" type="redirectAction">lxwmAction_findLxwm</result>
+			<result name="lxwmFind">/jsp/Backstage/lxwm/addLxwm.jsp</result>
+			<!-- 配置页面的跳转 -->
+			
+			
+			
+			<result name="regist" type="redirectAction">gsjjAction_findGsjj</result>
+			<result name="registIndex">/jsp/Backstage/regist.jsp</result>
+			
+			<interceptor-ref name="userFilter">
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	</package>
+</struts>

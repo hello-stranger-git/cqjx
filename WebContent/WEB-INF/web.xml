@@ -17,4 +17,21 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- 配置struts的核心过滤器 -->
+  <filter>
+  	<filter-name>singIn</filter-name>
+  	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+
+  </filter>
+  <filter-mapping>
+  	<filter-name>singIn</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  
+
 </web-app>
