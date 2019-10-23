@@ -5,19 +5,23 @@ private String uuid;
 private String newstype;
 private String newscontent;
 
-private String newsImage;
+private String newsImageName;
 
-public String getNewsImage() {
-	return newsImage;
+
+
+public String getNewsImageName() {
+	return newsImageName;
 }
-public void setNewsImage(String newsImage) {
-	this.newsImage = newsImage;
+
+
+public void setNewsImageName(String newsImageName) {
+	this.newsImageName = newsImageName;
 }
+
 
 @Override
 public String toString() {
-	return "news [uuid=" + uuid + ", newstype=" + newstype + ", newscontent=" + newscontent + ", newsImage=" + newsImage
-			+ "]";
+	return "news [uuid=" + uuid + ", newstype=" + newstype + ", newscontent=" + newscontent + ", newsImage=";
 }
 
 
@@ -25,12 +29,11 @@ public news() {
 //	super();
 	// TODO Auto-generated constructor stub
 }
-public news(String uuid, String newstype, String newscontent,String newsImage) {
+public news(String uuid, String newstype, String newscontent) {
 //	super();
 	this.uuid = uuid;
 	this.newstype = newstype;
 	this.newscontent = newscontent;
-	this.newsImage = newsImage;
 }
 public String getUuid() {
 	return uuid;

@@ -1,9 +1,7 @@
 package cqjxBackstage.com.cqjx.web.Action;
 
-import java.io.File;
-import java.util.List;
+import java.io.File;import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
@@ -43,29 +41,25 @@ public class newsAction extends ActionSupport implements ModelDriven<news>{
 		this.newsImageFileName = newsImageFileName;
 	}
 	
-	public String add() {
-		try {
-//			在WebRoot下新建一个文件夹，名为upload，获取真实地址
-			String realPath=ServletActionContext.getServletContext().getRealPath("/upload");
-//			File file1=new File(realPath);
-//            if(!file1.exists()){ 
-//
-//                file1.mkdir(); 
-//
-//            }
-			File file=new File(realPath,newsImageFileName);
-
-
-			//复制文件
-			FileUtils.copyFile(newsImage, file);
-		} catch (Exception e) {
-			// TODO: handle exception
-			ActionContext.getContext().put("newsImageMessage", "图片上传失败");
-			return "newsImageMessage_falid";
+	public void add() {
+	try {
+//		在WebRoot下新建一个文件夹，名为upload，获取真实地址
+		String realPath=ServletActionContext.getServletContext().getRealPath("/upload");
+		File file1=new File(realPath);
+		if(!file1.exists())
+		{
+			file1.mkdirs();
 		}
-		news.setNewsImage(newsImageFileName);
-		ActionContext.getContext().put("newsImageMessage", "图片上传成功");
-		return "newsImageMessage_success";
+		File file=new File(realPath,newsImageFileName);
+
+		//复制文件
+		FileUtils.copyFile(newsImage, file);
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+		ActionContext.getContext().put("newsImageMessage", "图片上传失败");
+	}
+	news.setNewsImageName(newsImageFileName);
 	}
 	
 	

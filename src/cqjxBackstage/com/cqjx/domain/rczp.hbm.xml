@@ -11,6 +11,7 @@
 		<!-- 建立普通属性与表字段映射 -->
 		<property name="rczptype" column="rczptype"/>
 		<property name="rczpcontent" column="rczpcontent"/>
+		<property name="rczpImageName" column="rczpImageName"/>
 		<!-- 配置多对一的关系：放置的是一的一方的对象 -->
 		<!-- 
 			many-to-one标签

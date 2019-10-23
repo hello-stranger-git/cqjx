@@ -95,9 +95,14 @@
 			<result name="regist" type="redirectAction">gsjjAction_findGsjj</result>
 			<result name="registIndex">/jsp/Backstage/regist.jsp</result>
 			
+
+			
 			<interceptor-ref name="userFilter">
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
+
 		</action>
 	</package>
+	
+	
 </struts>
