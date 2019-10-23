@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,20 +15,17 @@
 	<div class="singInTitle">
 		<h1>登录</h1>
 	</div>
-	<form class="form-inline container">
+	<form class="form-inline container" action="${pageContext.request.contextPath }/userAction_singIn" method="post">
 		<div class="form-group">
-			<label>账号</label> <input type="email" class="form-control"
+			<label>账号</label> <input type="text" class="form-control" name="username"
 				id="exampleInputEmail3" placeholder="请输入账号">
 		</div>
 		<div class="form-group">
-			<label>密码</label> <input type="password" class="form-control"
+			<label>密码</label> <input type="password" class="form-control" name="password"
 				id="exampleInputPassword3" placeholder="请输入密码">
 		</div>
+		<h5><s:actionerror/></h5>
 		<button type="submit" class="btn btn-primary">登录</button>
-		<div class="checkbox">
-			<label> <input type="checkbox"> 记住密码
-			</label>
-		</div>
 	</form>
 	<%@ include file="/jsp/Footer.jsp"%>
 </body>
