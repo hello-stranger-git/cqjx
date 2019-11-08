@@ -31,7 +31,7 @@
 			<tr>
 				<td>${findCpzxDelete.cplxtype }</td>
 				<td>${findCpzxDelete.cplxcontent }</td>
-				<td><a href="${pageContext.request.contextPath}/cpzxAction_deleteCpzx?uuid=${findCpzxDelete.uuid}">删除</a></td>
+				<td><a href="${pageContext.request.contextPath}/cpzxAction_deleteCpzx?uuid=${findCpzxDelete.uuid}&&cplxtype=${findCpzxDelete.cplxtype}">删除</a></td>
 			</tr>
 		</c:forEach>
 	</table>

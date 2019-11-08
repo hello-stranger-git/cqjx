@@ -63,10 +63,12 @@
 		 
 		<mapping resource="cqjxBackstage/com/cqjx/domain/user.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/cpzx.hbm.xml" />
+		<mapping resource="cqjxBackstage/com/cqjx/domain/cpzxMessage.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/lxwm.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/gsfl.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/rczp.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/news.hbm.xml" />
+		<mapping resource="cqjxBackstage/com/cqjx/domain/newsMessage.hbm.xml" />
 		<mapping resource="cqjxBackstage/com/cqjx/domain/gsjj.hbm.xml" />
 		
 	</session-factory>

@@ -73,7 +73,20 @@ public class newsAction extends ActionSupport implements ModelDriven<news>{
 		return "addnews";
 	}
 	public String addNewsIndex() {//默认进入界面
+		newsService newsservice=new newsServiceImp();
+		List<news> addNewsIndex = newsservice.findNews();
+		ServletActionContext.getRequest().setAttribute("addNewsIndex", addNewsIndex);
+
 		return "addNewsIndex";
+	}
+	
+	
+	public String addNewslxIndex() {//默认进入界面
+		newsService newsservice=new newsServiceImp();
+		List<news> addNewsIndex = newsservice.findNews();
+		ServletActionContext.getRequest().setAttribute("addNewsIndex", addNewsIndex);
+
+		return "addNewslxIndex";
 	}
 	
 	public String deleteNewsIndex() {//默认进入界面
@@ -110,11 +123,11 @@ public class newsAction extends ActionSupport implements ModelDriven<news>{
 	public String deleteNews() {//删除新闻
 		newsService newsservice=new newsServiceImp();
 		newsservice.deleteNews(news);
-//		System.out.println(newsList);
-//		ServletActionContext.getRequest().setAttribute("newsList", newsList);
 		return "deleteNewsIndex";
 		
 	}
+	
+	
 
 	@Override
 	public news getModel() {

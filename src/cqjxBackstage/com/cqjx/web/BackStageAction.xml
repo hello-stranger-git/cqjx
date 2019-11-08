@@ -19,12 +19,28 @@
 			<!-- 产品资讯 -->
 			<result name="WebCpzxFind">/jsp/web/cpzx/cpzx.jsp</result>
 			<result name="WebCpzxMessageFind">/jsp/web/cpzx/cpzxMessage.jsp</result>
+			<result name="webFindCpzxIndex">/jsp/web/cpzx/cpzxIndex.jsp</result>
 		</action>
+		
+		<action name="webCpzxMessageAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webCpzxMessageAction" method="{1}">
+			<!-- 产品信息 -->
+			<result name="findCplx">/jsp/web/cpzx/cpzx.jsp</result>
+			<result name="findCpzxMessageUuid">/jsp/web/cpzx/cpzxMessage.jsp</result>
+		</action>
+		
 		<action name="webNewsAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webNewsAction" method="{1}">
-			<!-- 产品资讯 -->
+			<!-- 新闻资讯 -->
 			<result name="WebFindNews">/jsp/web/news/news.jsp</result>
 			<result name="WebNewsMessageFind">/jsp/web/news/newsMessage.jsp</result>
+			<result name="webFindNewsIndex">/jsp/web/news/newsIndex.jsp</result>
 		</action>
+		
+		<action name="webNewsMessageAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webNewsMessageAction" method="{1}">
+			<!-- 新闻资讯 -->
+			<result name="findNews">/jsp/web/news/news.jsp</result>
+			<result name="findNewsMessageUuid">/jsp/web/news/newsMessage.jsp</result>
+		</action>
+		
 		<action name="webLxwmAction_*" class="cqjxBackstage.com.cqjx.web.WebAction.webLxwmAction" method="{1}">
 			<!-- 联系我们 -->
 			<result name="WebLxwmFind">/jsp/web/lxwm/lxwm.jsp</result>
@@ -53,7 +69,11 @@
 		
 			<!-- 新闻 -->
 			<result name="addNewsIndex">/jsp/Backstage/news/addNews.jsp</result>
-			<result name="addnews" type="redirect">/jsp/Backstage/news/addNews.jsp</result>
+			<result name="addNewslxIndex">/jsp/Backstage/news/addNewslxMessage.jsp</result>
+			<result name="addnews" type="redirect">/jsp/Backstage/news/addNewslxMessage.jsp</result>
+			
+			<result name="addNewsMessage"  type="redirectAction">newsAction_addNewsIndex</result>
+			
 			<result name="findNews">/jsp/Backstage/news/updateNews.jsp</result>
 			<result name="updateNews"  type="redirectAction">newsAction_findNews</result>
 			<result name="deleteNewsIndex"  type="redirectAction">newsAction_findNewsDelete</result>
@@ -61,7 +81,12 @@
 			
 			<!-- 产品资讯 -->
 			<result name="addCpzxIndex">/jsp/Backstage/cpzx/addCpzx.jsp</result>
-			<result name="addCpzx" type="redirect">/jsp/Backstage/cpzx/addCpzx.jsp</result>
+			<result name="addCplxIndex">/jsp/Backstage/cpzx/addCpzxMessage.jsp</result>
+			
+			<result name="addCpzx" type="redirect">/jsp/Backstage/cpzx/addCpzxMessage.jsp</result>
+			
+			<result name="addCpzxMessage"  type="redirectAction">cpzxAction_addCpzxIndex</result>
+			
 			<result name="findCpzx">/jsp/Backstage/cpzx/updateCpzx.jsp</result>
 			<result name="updateCpzx" type="redirectAction">cpzxAction_findCpzx</result>
 			<result name="deleteCpzxIndex"  type="redirectAction">cpzxAction_findCpzxDelete</result>
