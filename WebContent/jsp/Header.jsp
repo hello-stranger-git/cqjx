@@ -6,6 +6,8 @@
 <title>重庆吉芯科技有限公司后台管理</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/InitCss.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Header.css">
+<script type="text/javascript"
+src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,12 +26,35 @@
                     </ul>
                 </div>
             </li>
-            <li class="gsjj">
-                <a href="${pageContext.request.contextPath}/webCpzxAction_webFindCpzx">产品资讯</a>
+            
+            <li class="zxns">
+                <!-- <span>产品资讯</span> -->
+                <a href="${pageContext.request.contextPath}/webCpzxAction_webFindCpzxIndex">产品资讯</a>
+                <div class="zpxx_submenu">
+                    <ul>
+                    	<c:if test="${!empty cpzxnav}">
+	                        <c:forEach items="${cpzxnav}" var="cpzxnav">
+		                        <li><a href="${pageContext.request.contextPath}/webCpzxMessageAction_findCplx?cplxtype=${cpzxnav.cplxtype}">${cpzxnav.cplxtype}</a></li>
+	                        </c:forEach>
+                        </c:if>
+                    </ul>
+                </div>
             </li>
             
-            <li class="gsjj">
-                <a href="${pageContext.request.contextPath}/webNewsAction_findNews">新闻资讯</a>
+            
+            
+            <li class="zxns">
+                <!-- <span>产品资讯</span> -->
+                <a href="${pageContext.request.contextPath}/webNewsAction_webFindNewsIndex">新闻资讯</a>
+                <div class="zpxx_submenu">
+                    <ul>
+                        <c:if test="${!empty newsnav}">
+	                        <c:forEach items="${newsnav}" var="newsnav">
+		                        <li><a href="${pageContext.request.contextPath}/webNewsMessageAction_findNews?newstype=${newsnav.newstype}">${newsnav.newstype}</a></li>
+	                        </c:forEach>
+                        </c:if>
+                    </ul>
+                </div>
             </li>
             
             
@@ -40,5 +65,3 @@
     </header>
 </body>
 </html>
-<style scoped="scoped">
-</style>

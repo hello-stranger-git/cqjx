@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -42,31 +42,16 @@
 				<div class="xgzl_lxfs" id="xgzl_lxfs">			
  					
 						<div class="row">
-						  <c:forEach items="${newsList }" var="newsList">
+						  <c:forEach items="${webFindNewsIndex }" var="webFindNewsIndex">
 							  <div class="col-sm-6 col-md-3">
 							    <div class="thumbnail">
-							      <img src="upload/${newsList.newsImageName}" style="width:240px;height:200px">
+							      <img src="upload/${webFindNewsIndex.newsImageName}" style="width:240px;height:200px">
 							      <div class="caption">
 							        <h3 style="height: 27px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;">
-							        	<c:if test="${!empty newsList.newsname}">
-									       ${newsList.newsname}
-										</c:if>
-								        <c:if test="${empty newsList.newsname}">
-									       ${newsList.newstype}
-										</c:if>
+							        	${webFindNewsIndex.newstype}
 							        </h3>
-							        <p style="height: 60px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">${newsList.newscontent}</p>
-							        <p style="text-align: center;">
-							       
-							        	
-							        	<c:if test="${!empty newsList.newsname}">
-									        <a href="${pageContext.request.contextPath}/webNewsMessageAction_findNewsMessageUuid?uuid=${newsList.uuid}" class="btn btn-primary" role="button">查看详情</a> 
-										</c:if>
-								        <c:if test="${empty newsList.newsname}">
-									        <a href="${pageContext.request.contextPath}/webNewsAction_findNewsMessage?uuid=${newsList.uuid}" class="btn btn-primary" role="button">查看详情</a> 
-										</c:if>
-							        
-							        </p>
+							        <p style="height: 60px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">${webFindNewsIndex.newscontent}</p>
+							        <p style="text-align: center;"><a href="${pageContext.request.contextPath}/webNewsAction_findNewsMessage?uuid=${webFindNewsIndex.uuid}" class="btn btn-primary" role="button">查看详情</a> </p>
 							      </div>
 							    </div>
 							   </div>

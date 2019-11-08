@@ -69,6 +69,10 @@ public class newsDaoImp implements newsDao {
 		news newsResult=(news)query.uniqueResult();
 		session.delete(newsResult);
 		
+		
+		newsMessageDao newsmessagedao=new newsMessageDaoImp();
+		newsmessagedao.deleteNewsMessage(news);
+		
 		tx.commit();	
 	}
 

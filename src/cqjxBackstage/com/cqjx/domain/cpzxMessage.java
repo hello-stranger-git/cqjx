@@ -1,19 +1,19 @@
 package cqjxBackstage.com.cqjx.domain;
 
-import java.util.Map;
-
-public class cpzx {
+public class cpzxMessage {
 	private String uuid;
 	private String cplxtype;
+	private String cplxname;
 	private String cplxcontent;
 	private String cpzxImageName;
-	private String cplxname; 
+
 	public String getCplxname() {
 		return cplxname;
 	}
 	public void setCplxname(String cplxname) {
 		this.cplxname = cplxname;
 	}
+	
 	public String getCpzxImageName() {
 		return cpzxImageName;
 	}
@@ -24,11 +24,11 @@ public class cpzx {
 	public String toString() {
 		return "cpzx [uuid=" + uuid + ", cplxtype=" + cplxtype + ", cplxcontent=" + cplxcontent + "]";
 	}
-	public cpzx() {
+	public cpzxMessage() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public cpzx(String uuid, String cplxtype, String cplxcontent) {
+	public cpzxMessage(String uuid, String cplxtype, String cplxcontent) {
 		super();
 		this.uuid = uuid;
 		this.cplxtype = cplxtype;
@@ -54,3 +54,4 @@ public class cpzx {
 	}
 
 }
+
