@@ -31,7 +31,7 @@
 			<tr>
 				<td>${findNewsDelete.newstype }</td>
 				<td>${findNewsDelete.newscontent }</td>
-				<td><a href="${pageContext.request.contextPath}/newsAction_deleteNews?uuid=${findNewsDelete.uuid}">删除</a></td>
+				<td><a href="${pageContext.request.contextPath}/newsAction_deleteNews?uuid=${findNewsDelete.uuid}&&newstype=${findNewsDelete.newstype}">删除</a></td>
 			</tr>
 		</c:forEach>
 	</table>

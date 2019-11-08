@@ -16,4 +16,5 @@ public interface newsService {
 
 	public List<news> findNewsMessag(news news);
 
+
 }

@@ -77,7 +77,18 @@ public class cpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 	
 	
 	public String addCpzxIndex() {//默认进入界面
+		cpzxService cpzxservice=new cpzxServiceImp();
+		List<cpzx> addCpzxIndex = cpzxservice.findCpzx();
+		ServletActionContext.getRequest().setAttribute("addCpzxIndex", addCpzxIndex);
 		return "addCpzxIndex";
+	}
+	
+	
+	public String addCplxIndex() {//默认进入界面
+		cpzxService cpzxservice=new cpzxServiceImp();
+		List<cpzx> addCpzxIndex = cpzxservice.findCpzx();
+		ServletActionContext.getRequest().setAttribute("addCpzxIndex", addCpzxIndex);
+		return "addCplxIndex";
 	}
 	
 	public String deleteCpzxIndex() {//默认进入界面
@@ -91,6 +102,8 @@ public class cpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 		cpzxservice.addcpzx(cpzx);
 		return "addCpzx";
 	}
+	
+
 	
 	public String findCpzx() {//查找产品资讯相关信息
 		cpzxService cpzxservice=new cpzxServiceImp();

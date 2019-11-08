@@ -21,9 +21,14 @@
 	<%@ include file="/jsp/Backstage/BackStage_header.jsp"%>
 	<%@ include file="/jsp/lbImage.jsp"%>
 	<div class="container">
-		<form action="${pageContext.request.contextPath}/cpzxAction_addCpzx"  enctype="multipart/form-data" method="post">
-		产品类型:<input type="text" name="cplxtype">
-		<textarea class="form-control" rows="10" placeholder="新闻类型描述"
+		<form action="${pageContext.request.contextPath}/cpzxMessageAction_addCpzxMessage"  enctype="multipart/form-data" method="post">
+		产品类型:<select name="cplxtype">
+				<c:forEach items="${addCpzxIndex}" var="addCpzxIndex">
+					<option>${addCpzxIndex.cplxtype}</option>
+				</c:forEach>
+			  </select>
+		产品资讯名称:<input type="text" name="cplxname" >
+		<textarea class="form-control" rows="10" placeholder="产品类型描述"
 			name="cplxcontent"></textarea>
 		<input type="file" name="cpzxImage" required="required">
 		<button type="submit" class="btn btn-primary">添加</button>

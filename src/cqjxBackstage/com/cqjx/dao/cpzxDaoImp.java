@@ -7,6 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import cqjxBackstage.com.cqjx.domain.cpzx;
+import cqjxBackstage.com.cqjx.domain.cpzxMessage;
+import cqjxBackstage.com.cqjx.service.cpzxMessageService;
+import cqjxBackstage.com.cqjx.service.cpzxMessageServiceImp;
 import cqjxBackstage.com.cqjx.web.util.HibernateUtils;
 
 public class cpzxDaoImp implements cpzxDao{
@@ -88,6 +91,8 @@ public class cpzxDaoImp implements cpzxDao{
 		cpzx cpzxResult=(cpzx)query.uniqueResult();
 		session.delete(cpzxResult);
 		
+		cpzxMessageDao cpzxmessagedao=new cpzxMessageDaoImp();
+		cpzxmessagedao.deleteCpzxMessage(cpzx);
 		tx.commit();
 	}
 
@@ -102,10 +107,11 @@ public class cpzxDaoImp implements cpzxDao{
 		Query query = session.createQuery(hql);
 		query.setString(0, cpzx.getUuid());
 		List<cpzx> cpzxList=query.list();
-		
 		tx.commit();
 		return cpzxList;
 	}
+
+
 	
 	
 	

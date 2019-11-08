@@ -8,9 +8,15 @@
 <title>重庆吉芯科技有限公司后台管理</title>
 <link href="${pageContext.request.contextPath}/css/bootstrap.css"
 	rel="stylesheet">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/InitCss.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/Header.css">
 </head>
 <body>
-	<%@ include file="/jsp/Header.jsp"%>
+<header class="header">
+        <ul class="topnav clearfix">
+            <span class="gs_name">重庆吉芯科技有限公司</span> 
+        </ul>
+    </header>
 	<%@ include file="/jsp/lbImage.jsp"%>
 	<div class="singInTitle">
 		<h1>登录</h1>

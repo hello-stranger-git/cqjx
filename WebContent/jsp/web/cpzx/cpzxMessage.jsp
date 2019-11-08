@@ -28,10 +28,13 @@
 			<div class="xgzl_title clearfix">
 				<span
 					style="box-shadow: rgba(83, 88, 93, 0.5) 2px 2px 6px 6px; border-radius: 4px; width: 124px; background: #e3e4e5; margin-bottom: 25px; font-size: 20px; font-weight: bold; display: inline-block; font-style: italic; color: #afacac;">产品咨询</span>
-				<a href="${pageContext.request.contextPath}/webCpzxAction_webFindCpzx">
-					<p id="xgzl_title_bmdz" style="color: #FFFFFF; background: blue; border-radius: 8px; box-shadow: rgba(83, 88, 93, 0.98) 2px 4px 6px;">
-						<span>产品咨询</span>
-					</p>
+				<c:forEach items="${webFindCpzxIndex }" var="webFindCpzxIndex">
+						<a href="${pageContext.request.contextPath}/webCpzxMessageAction_findCplx?cplxtype=${webFindCpzxIndex.cplxtype}">
+							<p id="xgzl_title_bmdz" style="color: #FFFFFF; background: blue; border-radius: 8px; box-shadow: rgba(83, 88, 93, 0.98) 2px 4px 6px;    margin-bottom: 15px;">
+								<span>${webFindCpzxIndex.cplxtype}</span>
+							</p>
+						</a>
+					</c:forEach>
 				</a>
 			</div>
 
@@ -40,7 +43,12 @@
 				<div class="xgzl_lxfs" id="xgzl_lxfs">
 					<c:forEach items="${cpzxMessageList }" var="cpzxMessageList">
 						<div class="xgzl_lxfs_title">
-							<span>${cpzxMessageList.cplxtype }</span>
+							<c:if test="${!empty cpzxMessageList.cplxname}">
+						       <span>${cpzxMessageList.cplxname }</span>
+							</c:if>
+					        <c:if test="${empty cpzxMessageList.cplxname}">
+						       <span>${cpzxMessageList.cplxtype }</span>
+							</c:if>
 						</div>
 						<hr>
 						<hr>

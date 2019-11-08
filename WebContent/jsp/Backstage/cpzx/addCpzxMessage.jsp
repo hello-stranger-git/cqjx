@@ -21,16 +21,11 @@
 	<%@ include file="/jsp/Backstage/BackStage_header.jsp"%>
 	<%@ include file="/jsp/lbImage.jsp"%>
 	<div class="container">
-	<form action="${pageContext.request.contextPath}/newsMessageAction_addnewsMessage" method="post" enctype="multipart/form-data">
-		新闻类型:<select name="newstype">
-				<c:forEach items="${addNewsIndex}" var="addNewsIndex">
-					<option>${addNewsIndex.newstype}</option>
-				</c:forEach>
-			  </select>
-		新闻资讯名称:<input type="text" name="newsname">
-		<textarea class="form-control" rows="10" placeholder="新闻类型描述"
-			name="newscontent"></textarea>
-		<input type="file" name="newsImage" required="required">	
+		<form action="${pageContext.request.contextPath}/cpzxAction_addCpzx"  enctype="multipart/form-data" method="post">
+		产品类型:<input type="text" name="cplxtype" >
+		<textarea class="form-control" rows="10" placeholder="产品类型描述"
+			name="cplxcontent"></textarea>
+		<input type="file" name="cpzxImage" required="required">
 		<button type="submit" class="btn btn-primary">添加</button>
 	</form>
 	</div>

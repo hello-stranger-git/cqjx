@@ -6,7 +6,17 @@ private String newstype;
 private String newscontent;
 
 private String newsImageName;
+private String newsname;
 
+
+public String getNewsname() {
+	return newsname;
+}
+
+
+public void setNewsname(String newsname) {
+	this.newsname = newsname;
+}
 
 
 public String getNewsImageName() {

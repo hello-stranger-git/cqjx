@@ -46,11 +46,13 @@
 				<div class="zpxx_submenu">
 					<ul>
 						<li><a
+							href="${pageContext.request.contextPath}/cpzxAction_addCplxIndex">添加产品类型</a></li>
+						<li><a
 							href="${pageContext.request.contextPath}/cpzxAction_addCpzxIndex">添加产品资讯</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/cpzxAction_findCpzx">修改产品资讯</a></li>
+							href="${pageContext.request.contextPath}/cpzxAction_findCpzx">修改产品类型</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/cpzxAction_deleteCpzxIndex">删除产品资讯</a></li>
+							href="${pageContext.request.contextPath}/cpzxAction_deleteCpzxIndex">删除产品类型</a></li>
 					</ul>
 				</div>
 			</li>
@@ -58,13 +60,14 @@
 			<li class="zxns">
 				<!-- <span>招贤纳士</span> --> <a>新闻资讯</a>
 				<div class="zpxx_submenu">
-					<ul>
+					<ul><li><a
+							href="${pageContext.request.contextPath}/newsAction_addNewslxIndex">添加新闻类型</a></li>
 						<li><a
 							href="${pageContext.request.contextPath}/newsAction_addNewsIndex">添加新闻资讯</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/newsAction_findNews">修改新闻资讯</a></li>
+							href="${pageContext.request.contextPath}/newsAction_findNews">修改新闻类型</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/newsAction_deleteNewsIndex">删除新闻资讯</a></li>
+							href="${pageContext.request.contextPath}/newsAction_deleteNewsIndex">删除新闻类型</a></li>
 					</ul>
 				</div>
 			</li>
