@@ -10,9 +10,11 @@ public interface newsMessageDao {
 
 	void addnewsMessage(newsMessage newsmessage);
 	
-	public void deleteNewsMessage(news news);//É¾³ý²úÆ·×ÊÑ¶
+	public void deleteNewsMessage(news news);//É¾ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ñ¶
 	
 	List<newsMessage> findNews(newsMessage newsmessage);
-
+	
+	List<newsMessage> findNewsMessage();
+	
 	List<newsMessage> findNewsUuid(newsMessage newsmessage);
 }

@@ -8,12 +8,18 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 import cqjxBackstage.com.cqjx.domain.cpzx;
+import cqjxBackstage.com.cqjx.domain.cpzxMessage;
 import cqjxBackstage.com.cqjx.domain.gsjj;
 import cqjxBackstage.com.cqjx.domain.news;
+import cqjxBackstage.com.cqjx.domain.newsMessage;
+import cqjxBackstage.com.cqjx.service.cpzxMessageService;
+import cqjxBackstage.com.cqjx.service.cpzxMessageServiceImp;
 import cqjxBackstage.com.cqjx.service.cpzxService;
 import cqjxBackstage.com.cqjx.service.cpzxServiceImp;
 import cqjxBackstage.com.cqjx.service.gsjjService;
 import cqjxBackstage.com.cqjx.service.gsjjServiceImp;
+import cqjxBackstage.com.cqjx.service.newsMessageService;
+import cqjxBackstage.com.cqjx.service.newsMessageServiceImp;
 import cqjxBackstage.com.cqjx.service.newsService;
 import cqjxBackstage.com.cqjx.service.newsServiceImp;
 
@@ -27,27 +33,37 @@ public class webGsjjAction extends ActionSupport implements ModelDriven<gsjj>{
 
 	
 	public String findGsjj() {
-		//¼ÓÔØÐÂÎÅµ¼º½
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½
 		newsService newsservice=new newsServiceImp();
-		List<news> newsList = newsservice.findNews();
+//		List<news> newsList = newsservice.findNews();
 		List<news> webFindNewsIndex = newsservice.findNews();
 		ServletActionContext.getRequest().getSession().setAttribute("newsnav",webFindNewsIndex);
+//		ServletActionContext.getRequest().setAttribute("newsListMessage", newsList);
 		
-		//¼ÓÔØ²úÆ·µ¼º½
+		
+		newsMessageService newsMessageservice=new newsMessageServiceImp();
+		List<newsMessage> newsMessageListAll = newsMessageservice.findNewsMessage();
+		ServletActionContext.getRequest().setAttribute("newsMessageListAll", newsMessageListAll);
+		
+		
+		//ï¿½ï¿½ï¿½Ø²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 		cpzxService cpzxservice=new cpzxServiceImp();
 		List<cpzx> cpzxList = cpzxservice.findCpzx();
 		List<cpzx> webFindCpzxIndex = cpzxservice.findCpzx();
 		ServletActionContext.getRequest().getSession().setAttribute("cpzxnav",webFindCpzxIndex);
+		ServletActionContext.getRequest().setAttribute("cpzxListMessage", cpzxList);
+		
+		
+		cpzxMessageService cpzxMessageservice=new cpzxMessageServiceImp();
+		List<cpzxMessage> cpzxMessageListAll = cpzxMessageservice.findCpzxMessage();
+		ServletActionContext.getRequest().setAttribute("cpzxMessageListAll", cpzxMessageListAll);
 		
 		
 		gsjjService gsjjservice=new gsjjServiceImp();
 		gsjj gsjj=gsjjservice.findGsjj();
 		System.out.println(gsjj);
-		String[] gsjjList = gsjj.getGsjj().split("\\s+");
-		ServletActionContext.getRequest().setAttribute("gsjjList",gsjjList);
+		ServletActionContext.getRequest().setAttribute("gsjjList",gsjj);
 		return "WebFindGsjj";
 	}
-	
-	
 
 }

@@ -43,3 +43,31 @@
 .main_context p{
     text-indent: 2em
 }
+.title{
+	text-align:center;
+	padding-bottom: 30px;
+}
+.title ul li{
+	display: inline-block;
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+.title ul li:nth-child(2){
+	border-bottom: 2px solid #f60b0b;
+}
+.title ul li a:hover{
+	color:#005eff
+}
+.newsDiv{
+	display:none;	
+}
+.newsDiv dl dt,.productDiv dl dt{
+	font-size:20px
+}
+.newsDiv dl dt,.productDiv dl dt{
+	font-size:15px
+}
+.productDiv{
+	display:none;
+}

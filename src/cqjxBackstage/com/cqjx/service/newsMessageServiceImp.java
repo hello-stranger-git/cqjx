@@ -30,5 +30,10 @@ public class newsMessageServiceImp implements newsMessageService {
 		newsMessageDao newsmessagedao=new newsMessageDaoImp();
 		return newsmessagedao.findNews(newsmessage);
 	}
+	public List<newsMessage> findNewsMessage() {
+		// TODO Auto-generated method stub
+		newsMessageDao newsmessagedao=new newsMessageDaoImp();
+		return newsmessagedao.findNewsMessage();
+	}
 
 }

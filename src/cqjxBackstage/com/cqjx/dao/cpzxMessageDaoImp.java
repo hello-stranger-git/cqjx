@@ -67,6 +67,20 @@ public class cpzxMessageDaoImp implements cpzxMessageDao {
 		return cpzxList;
 	}
 
+	@Override
+	public List<cpzxMessage> findCpzxMessage() {
+		// TODO Auto-generated method stub
+		Session session=HibernateUtils.getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		
+		String hql="from cpzxMessage";
+		Query query = session.createQuery(hql);
+		List<cpzxMessage> CpzxMessage=query.list();
+		
+		tx.commit();
+		return CpzxMessage;
+	}
+
 
 
 }

@@ -13,4 +13,6 @@ public interface cpzxMessageService {
 	
 	public List<cpzxMessage> findCplxUuid(cpzxMessage cpzxmessage);
 
+	public List<cpzxMessage> findCpzxMessage();
+
 }

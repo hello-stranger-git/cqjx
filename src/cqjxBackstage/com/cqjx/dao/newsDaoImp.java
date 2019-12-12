@@ -92,5 +92,6 @@ public class newsDaoImp implements newsDao {
 		tx.commit();
 		return newsMessageResult;
 	}
+	
 
 }

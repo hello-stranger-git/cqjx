@@ -11,5 +11,6 @@ public interface newsMessageService {
 	public List<newsMessage> findNewsUuid(newsMessage newsmessage);
 
 	public List<newsMessage> findNews(newsMessage newsmessage);
-
+	
+	public List<newsMessage> findNewsMessage();
 }
