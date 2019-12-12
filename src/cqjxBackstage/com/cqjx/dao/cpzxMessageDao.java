@@ -9,10 +9,12 @@ public interface cpzxMessageDao {
 
 	void addcpzxMessage(cpzxMessage cpzxmessage);
 	
-	public void deleteCpzxMessage(cpzx cpzx);//É¾³ý²úÆ·×ÊÑ¶
+	public void deleteCpzxMessage(cpzx cpzx);//É¾ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ñ¶
 	
 	List<cpzxMessage> findCplx(cpzxMessage cpzxmessage);
 	
 	List<cpzxMessage> findCplxUuid(cpzxMessage cpzxmessage);
+
+	List<cpzxMessage> findCpzxMessage();
 
 }

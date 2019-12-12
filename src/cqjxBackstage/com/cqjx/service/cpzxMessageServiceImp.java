@@ -30,4 +30,11 @@ public class cpzxMessageServiceImp implements cpzxMessageService {
 		return cpzxmessagedao.findCplxUuid(cpzxmessage);
 	}
 
+	@Override
+	public List<cpzxMessage> findCpzxMessage() {
+		// TODO Auto-generated method stub
+		cpzxMessageDao cpzxmessagedao=new cpzxMessageDaoImp();
+		return cpzxmessagedao.findCpzxMessage();
+	}
+
 }

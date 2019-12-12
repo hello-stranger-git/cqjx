@@ -14,6 +14,25 @@
 	src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/wangEditor.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/wangEditor.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var E = window.wangEditor
+    var editor = new E('#div1')
+    var $text1 = $('#updateNewsEditor')
+    editor.customConfig.onchange = function (html) {
+        // 监控变化，同步更新到 textarea
+        $text1.val(html)
+    }
+    editor.create()
+    // 初始化 textarea 的值
+    $text1.val(editor.txt.html())
+}
+
+</script>
 </head>
 <body>
 <%@ include file="/jsp/Backstage/BackStage_header.jsp"%>
@@ -26,7 +45,9 @@
 				<option>${newsList.newstype }</option>
 			</c:forEach>
 		</select>
-		<textarea class="form-control" rows="10" placeholder="新闻类型描述"
+		<div id="div1">
+		 </div>
+		<textarea class="form-control" id="updateNewsEditor" style="display:none" rows="10" placeholder="新闻类型描述"
 			name="newscontent"></textarea>
 		<button type="submit" class="btn btn-primary">修改</button>
 	</form>

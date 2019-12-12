@@ -67,5 +67,16 @@ public class newsMessageDaoImp implements newsMessageDao {
 		tx.commit();
 		return newsList;
 	}
-
+	public List<newsMessage> findNewsMessage() {
+		// TODO Auto-generated method stub
+		Session session=HibernateUtils.getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		
+		String hql="from newsMessage";
+		Query query = session.createQuery(hql);
+		List<newsMessage> newsList=query.list();
+		
+		tx.commit();
+		return newsList;
+	}
 }

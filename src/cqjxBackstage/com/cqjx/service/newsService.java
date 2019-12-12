@@ -15,6 +15,4 @@ public interface newsService {
 	public void deleteNews(news news);
 
 	public List<news> findNewsMessag(news news);
-
-
 }
