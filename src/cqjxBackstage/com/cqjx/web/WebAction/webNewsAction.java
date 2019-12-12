@@ -2,6 +2,8 @@ package cqjxBackstage.com.cqjx.web.WebAction;
 
 import java.util.List;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -23,17 +25,17 @@ public class webNewsAction extends ActionSupport implements ModelDriven<news>{
 		return news;
 	}
 	
-	public String findNews() {//²éÕÒĞÂÎÅ
+	public String findNews() {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		newsService newsservice=new newsServiceImp();
 		List<news> newsList = newsservice.findNews();
 		System.out.println(newsList);
 		ServletActionContext.getRequest().setAttribute("newsList", newsList);
+		System.out.println("è¯·æ±‚æˆåŠŸä¸º"+ServletActionContext.getRequest().getAttribute("newsList"));
 		return "WebFindNews";
 		
 	}
 	
-	
-//	public void webFindNewsNav() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØĞÅÏ¢
+//	public void webFindNewsNav() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 //		newsService newsservice=new newsServiceImp();
 //		List<news> newsList = newsservice.findNews();
 //		List<news> webFindNewsIndex = newsservice.findNews();
@@ -41,14 +43,14 @@ public class webNewsAction extends ActionSupport implements ModelDriven<news>{
 //	}
 	
 	
-	public String webFindNewsIndex() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØĞÅÏ¢
+	public String webFindNewsIndex() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		newsService newsservice=new newsServiceImp();
 		List<news> webFindNewsIndex = newsservice.findNews();
 		ServletActionContext.getRequest().setAttribute("webFindNewsIndex", webFindNewsIndex);
 		return "webFindNewsIndex";
 	}
 	
-	public String findNewsMessage() {//²éÕÒĞÂÎÅ
+	public String findNewsMessage() {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		newsService newsservice=new newsServiceImp();
 		List<news> newsMessageList = newsservice.findNewsMessag(news);

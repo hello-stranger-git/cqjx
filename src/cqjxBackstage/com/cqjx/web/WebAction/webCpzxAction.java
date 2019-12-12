@@ -14,7 +14,7 @@ import cqjxBackstage.com.cqjx.service.cpzxServiceImp;
 public class webCpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 	cpzx cpzx=new cpzx();
 	
-	public String webFindCpzx() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØÐÅÏ¢
+	public String webFindCpzx() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		cpzxService cpzxservice=new cpzxServiceImp();
 		List<cpzx> cpzxList = cpzxservice.findCpzx();
 		ServletActionContext.getRequest().setAttribute("cpzxList", cpzxList);
@@ -24,8 +24,7 @@ public class webCpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 		System.out.println(cpzxList);
 		return "WebCpzxFind";
 	}
-	
-//	public void webFindCpzxNav() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØÐÅÏ¢
+//	public void webFindCpzxNav() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 //		cpzxService cpzxservice=new cpzxServiceImp();
 //		List<cpzx> cpzxList = cpzxservice.findCpzx();
 //		List<cpzx> webFindCpzxIndex = cpzxservice.findCpzx();
@@ -34,7 +33,7 @@ public class webCpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 //	}
 	
 	
-	public String webFindCpzxIndex() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØÐÅÏ¢
+	public String webFindCpzxIndex() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		cpzxService cpzxservice=new cpzxServiceImp();
 		List<cpzx> webFindCpzxIndex = cpzxservice.findCpzx();
 		ServletActionContext.getRequest().setAttribute("webFindCpzxIndex", webFindCpzxIndex);
@@ -42,7 +41,7 @@ public class webCpzxAction extends ActionSupport implements ModelDriven<cpzx>{
 		return "webFindCpzxIndex";
 	}
 	
-	public String findCpzxMessage() {//²éÕÒ²úÆ·×ÊÑ¶Ïà¹ØÐÅÏ¢
+	public String findCpzxMessage() {//ï¿½ï¿½ï¿½Ò²ï¿½Æ·ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		
 		
 		cpzxService cpzxservice=new cpzxServiceImp();
